@@ -1,0 +1,50 @@
+---
+import RedesImg from '../assets/redes-img.png';
+import LogoTreebCard from '../assets/logo-Treebcard.png';
+
+
+import Layout from '../layouts/Layout.astro';
+
+---
+
+<Layout>
+    <section class="flex flex-col md:flex-row-reverse">
+
+        <div class="flex-2" transition:name=" {RedesSociales} " >
+            <div class=" bg-secundario rounded-bl-full h-auto md:h-160">
+                <img src={RedesImg.src} alt="" class="h-auto w-auto" >
+            </div>
+        </div>
+        
+        
+        <div class="flex flex-1 flex-col m-0 content-center justify-center">
+            <div class=" items-center inline-flex flex-col">
+                <a href="index.html" class="m-2">
+                    <img transition:name="{`LogoAnimate`}" src={LogoTreebCard.src} alt="logo Treeb-Card" class="">
+                </a>
+                <h2 class="inline text-4xl font-bold">Ingresar</h2>
+                <div class="bg-gray-100 px-10 py-10 mx-10 my-5 rounded-3xl items-center inline-flex flex-col h-fit w-fit ">
+                    <div class="items-center inline-flex flex-col">
+                        <h3 class="font-medium text-2xl text-center">Bienvenid@ <br>a tu Tree-bcard</h3>
+                    </div>
+                    
+                    <div class="">
+                        <form action="" class="flex flex-col mt-4">
+                            <input type="email" placeholder="correo" class="p-2  border-2  border-gris  shadow-md rounded-2xl m-1" >
+                            <input type="password" placeholder="contraseña" class="p-2  border-2  border-gris shadow-md rounded-2xl m-1">
+                            <input type="submit" value="Ingresar" class=" bg-primario py-4 px-10 text-blanco rounded-3xl hover:bg-primarioOscuro font-bold text-center my-4 shadow-md md:inline-flex transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110">
+                        </form>
+                        <div class="flex-col  gap-1 justify-center text-center">
+                            <h2>¿No tienes una cuenta?</h2> 
+                            <a href="crearCuenta" class="text-secundario hover:underline decoration-secundario">Crear Cuenta</a>
+                        </div> 
+                        
+                </div>
+            </div>
+            
+            
+            </div>
+    
+        </div>
+    </section>
+</Layout>

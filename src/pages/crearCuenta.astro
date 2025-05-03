@@ -1,0 +1,50 @@
+---
+import RedesImg from '../assets/redes-img.png';
+import LogoTreebCard from '../assets/logo-Treebcard.png';
+
+import Layout from '../layouts/Layout.astro';
+
+---
+
+<Layout>
+    <section class="flex flex-col md:flex-row">
+        <div class="flex-2" transition:name=" {RedesSociales} " >
+            <div class=" bg-primario rounded-br-full h-auto md:h-160">
+                <img src={RedesImg.src} alt="" class="h-auto w-auto"  >
+            </div>
+        </div>
+        
+        
+        <div class="flex flex-1 flex-col m-0 content-center justify-center">
+            <div class=" items-center inline-flex flex-col">
+                <a href="index.html" class="m-2">
+                    <img transition:name="{`LogoAnimate`}" src={LogoTreebCard.src} alt="logo Treeb-Card" class="">
+                </a>
+                <h2 class="inline text-4xl font-bold">Crea tu cuenta</h2>
+                <div class="bg-gray-100 px-10 py-10 mx-10 my-5 rounded-3xl items-center inline-flex flex-col h-fit w-fit ">
+                    <div class="items-center inline-flex flex-col">
+                        <h3 class="font-medium text-2xl text-center">Disfruta <br> tu Tree-bcard</h3>
+                        <h4 class="font-medium text-2xl">¡Comienza ahora!</h4>
+                    </div>
+                    
+                    <div class="">
+                        <form action="" class="flex flex-col mt-4">
+                            <input type="text" placeholder="usuario" class="p-2  border-2 border-gris shadow-md rounded-2xl m-1">
+                            <input type="email" placeholder="correo" class="p-2  border-2  border-gris  shadow-md rounded-2xl m-1" >
+                            <input type="password" placeholder="contraseña" class="p-2  border-2  border-gris shadow-md rounded-2xl m-1">
+                            <input type="submit" value="Crear Cuenta" class=" bg-primario py-4 px-10 text-blanco rounded-3xl hover:bg-primarioOscuro font-bold text-center my-4 shadow-md md:inline-flex transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110">
+                        </form>
+                        <div class="flex  gap-2 justify-center">
+                            <h2>¡Ya tienes una cuenta!</h2> 
+                            <a href="ingresar" class="text-secundario hover:underline decoration-secundario">Ingresar</a>
+                        </div> 
+                        
+                </div>
+            </div>
+            
+            
+            </div>
+    
+        </div>
+    </section>
+</Layout>
