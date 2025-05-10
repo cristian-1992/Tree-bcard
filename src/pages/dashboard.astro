@@ -1,0 +1,73 @@
+---
+import LogoTreebCard from '../assets/logo-Treebcard.png';
+
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout>
+    <div id="app" class="relative h-screen  gap-1 ">
+        <aside class="[grid-area:aside] flex-col flex overflow-auto items-center bg-oscuro py-5 justify-between border-r-8 border-primario">
+                <a href="index.html" class="logo">
+                    <img transition:name="{`LogoAnimate`}" src={LogoTreebCard.src} alt="logo Treeb-Card" class="min-w-15 p-2" >
+                </a>
+    
+                <a href="#" class="flex items-center p-2 text-blanco hover:text-primario">
+                    <svg class="w-6 h-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 12H8m12 0-4 4m4-4-4-4M9 4H7a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h2"/>
+                    </svg>
+                    <span class="ml-3 ">Salir</span>
+                </a>
+        </aside>
+
+        <main class="[grid-area:main] p-2 m-2 bg-blanco rounded-2xl shadow-2xl">
+            <div class="p-16">
+                <nav class="flex">
+                    <ul class=" flex gap-7 ">
+                        <a href="#">Bio</a>
+                        <a href="#">Links</a>
+                        <a href="#">Diseño</a>
+                        <a href="#">Analiticas</a>
+                    </ul>
+                </nav>
+                <div class="flex mt-7">
+                    <div class="w-[70px] rounded-bl-full">
+                        <img  class="" src="https://img.freepik.com/vector-premium/icono-perfil-avatar-predeterminado-imagen-usuario-redes-sociales-icono-avatar-gris-silueta-perfil-blanco-ilustracion-vectorial_561158-3407.jpg" alt="">
+                    </div>
+                    <div class="flex flex-col justify-evenly m-5 gap-3">
+                        <form action="" >
+                            <div class="">
+                                <label for="Titulo" class="inline ">Nombre</label>
+                                <input class="p-2 inline w-[500px] border-2 border-solid rounded-[10px] border-gris shadow-2xs" type="text" placeholder="Nombre" >
+                            </div>
+                      </form>
+                      <div class="flex flex-col">
+                        <label for="Bio" class="inline">Bio</label>
+                        <textarea class="w-[500px] h-[100px] border-2 border-solid rounded-[10px] border-gris shadow-2xs" id="" maxlength="120"></textarea>
+
+                        <input type="submit" value="Guardar" class=" bg-primario py-4 px-10 text-blanco rounded-3xl w-[500px] hover:bg-primarioOscuro font-bold text-center my-4 shadow-md md:inline-flex transition delay-150 duration-300 ease-in-out hover:-translate-y-1">
+                      </div>
+     
+                    </div>
+                    
+                </div>
+
+            </div>
+            
+        </main>
+
+        <div class="[grid-area:preview] p-2 m-2 bg-blanco rounded-2xl shadow-2xl">
+            preview
+        </div>
+    </div>
+
+    
+    
+    <style>
+        #app{
+            display: grid;
+            grid-template-areas: 
+            "aside main preview";
+            grid-template-columns: 150px 2fr 1fr;
+            grid-template-rows: 1fr auto;
+        }
+    </style>
+</Layout>
