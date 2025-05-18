@@ -1,7 +1,14 @@
 ---
+
+
 import LogoTreebCard from '../assets/logo-Treebcard.png';
 
 import Layout from '../layouts/Layout.astro';
+
+const user = Astro.locals.user;
+console.log(user)
+
+
 ---
 
 <Layout>
@@ -10,12 +17,18 @@ import Layout from '../layouts/Layout.astro';
                 <a href="index.html" class="logo">
                     <img transition:name="{`LogoAnimate`}" src={LogoTreebCard.src} alt="logo Treeb-Card" class="min-w-15 p-2" >
                 </a>
-    
-                <a href="#" class="flex items-center p-2 text-blanco hover:text-primario">
-                    <svg class="w-6 h-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 12H8m12 0-4 4m4-4-4-4M9 4H7a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h2"/>
+
+                <form 
+                    action="/api/signout"
+                    method="POST">
+                    <button class="flex items-center p-2 text-blanco hover:text-primario">
+                        <svg class="w-6 h-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 12H8m12 0-4 4m4-4-4-4M9 4H7a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h2"/>
                     </svg>
                     <span class="ml-3 ">Salir</span>
-                </a>
+
+                    </button>
+                </form>
+    
         </aside>
 
         <main class="[grid-area:main] p-2 m-2 bg-blanco rounded-2xl shadow-2xl">

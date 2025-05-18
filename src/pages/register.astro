@@ -27,16 +27,19 @@ import Layout from '../layouts/Layout.astro';
                         <h4 class="font-medium text-2xl">¡Comienza ahora!</h4>
                     </div>
                     
-                    <div class="">
-                        <form action="" class="flex flex-col mt-4">
-                            <!-- <input type="text" placeholder="usuario" class="p-2  border-2 border-gris shadow-md rounded-2xl m-1"> -->
-                            <input type="email" placeholder="correo" class="p-2  border-2  border-gris  shadow-md rounded-2xl m-1" >
-                            <input type="password" placeholder="contraseña" class="p-2  border-2  border-gris shadow-md rounded-2xl m-1">
-                            <input type="submit" value="Crear Cuenta" class=" bg-primario py-4 px-10 text-blanco rounded-3xl hover:bg-primarioOscuro font-bold text-center my-4 shadow-md md:inline-flex transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110">
+                    <div class=""> 
+                        <form 
+                            action="/api/signup"
+                            method="POST" 
+                            class="flex flex-col mt-4">
+                            <input type="email"     id="email"  required  name="username"  placeholder="correo" class="p-2  border-2  border-gris  shadow-md rounded-2xl m-1" >
+                            <input type="password"  id="password" required name="password" placeholder="contraseña" class="p-2  border-2  border-gris shadow-md rounded-2xl m-1">
+                            <button type="submit" class=" bg-primario py-4 px-10 text-blanco rounded-3xl hover:bg-primarioOscuro font-bold text-center my-4 shadow-md justify-center md:inline-flex transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110">Crear Cuenta</button>
+                            
                         </form>
-                        <div class="flex  gap-2 justify-center">
+                        <div class="flex flex-col gap-1 justify-center text-center">
                             <h2>¡Ya tienes una cuenta!</h2> 
-                            <a href="ingresar" class="text-secundario hover:underline decoration-secundario">Ingresar</a>
+                            <a href="signin" class="text-secundario hover:underline decoration-secundario">Ingresar</a>
                         </div> 
                         
                 </div>

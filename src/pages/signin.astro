@@ -2,8 +2,8 @@
 import RedesImg from '../assets/redes-img.png';
 import LogoTreebCard from '../assets/logo-Treebcard.png';
 
-
 import Layout from '../layouts/Layout.astro';
+
 
 ---
 
@@ -29,14 +29,19 @@ import Layout from '../layouts/Layout.astro';
                     </div>
                     
                     <div class="">
-                        <form action="" class="flex flex-col mt-4">
-                            <input type="email" placeholder="correo" class="p-2  border-2  border-gris  shadow-md rounded-2xl m-1" >
-                            <input type="password" placeholder="contraseña" class="p-2  border-2  border-gris shadow-md rounded-2xl m-1">
-                            <input type="submit" value="Ingresar" class=" bg-primario py-4 px-10 text-blanco rounded-3xl hover:bg-primarioOscuro font-bold text-center my-4 shadow-md md:inline-flex transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110">
+                        <form  
+                            action="/api/signin" 
+                            method="POST" 
+                            class="flex flex-col mt-4">
+                            <input type="email"     id="email"  required  name="username"  placeholder="correo" class="p-2  border-2  border-gris  shadow-md rounded-2xl m-1" >
+                            <input type="password"  id="password" required name="password" placeholder="contraseña" class="p-2  border-2  border-gris shadow-md rounded-2xl m-1">
+                        
+                            <button type="submit" value="Ingresar" class=" bg-primario py-4 px-10 text-blanco rounded-3xl hover:bg-primarioOscuro font-bold justify-center text-center my-4 shadow-md md:inline-flex transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110">Ingresar</button>
+
                         </form>
                         <div class="flex-col  gap-1 justify-center text-center">
                             <h2>¿No tienes una cuenta?</h2> 
-                            <a href="crearCuenta" class="text-secundario hover:underline decoration-secundario">Crear Cuenta</a>
+                            <a href="register" class="text-secundario hover:underline decoration-secundario">Crear Cuenta</a>
                         </div> 
                         
                 </div>
@@ -48,3 +53,5 @@ import Layout from '../layouts/Layout.astro';
         </div>
     </section>
 </Layout>
+
+
